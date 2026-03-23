@@ -1,0 +1,57 @@
+# PQC Lead Generation Targets — Finance & Healthcare (50 domains)
+# Canadian Banks (Big 5 + Major)
+rbc.com
+td.com
+bmo.com
+scotiabank.com
+cibc.com
+desjardins.com
+nationalbankofcanada.ca
+hsbc.ca
+laurentianbank.ca
+eqbank.ca
+# US Banks (Top 10)
+jpmorgan.com
+bankofamerica.com
+wellsfargo.com
+citigroup.com
+goldmansachs.com
+morganstanley.com
+usbank.com
+pnc.com
+truist.com
+capitalone.com
+# Insurance
+manulife.com
+sunlife.com
+greatwestlifeco.com
+intactfc.com
+statefarm.com
+progressive.com
+allstate.com
+metlife.com
+# Healthcare (US/Canada)
+unitedhealth.com
+anthem.com
+cigna.com
+humana.com
+kaiserpermanente.org
+mayoclinic.org
+clevelandclinic.org
+johnshopkins.edu
+sunnybrook.ca
+uhn.ca
+sickkids.ca
+# Government
+canada.ca
+cra-arc.gc.ca
+ontario.ca
+quebec.ca
+treasury.gov
+irs.gov
+ssa.gov
+# Fintech
+stripe.com
+square.com
+shopify.com
+wealthsimple.com
