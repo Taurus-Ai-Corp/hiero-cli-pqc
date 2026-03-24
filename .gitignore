@@ -13,3 +13,6 @@ venv/
 .env
 .env.local
 pqc-leads-batch/
+node_modules/
+.next/
+.vercel/
