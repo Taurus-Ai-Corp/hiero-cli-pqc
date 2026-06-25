@@ -1,14 +1,14 @@
 from setuptools import setup, find_namespace_packages
 
 setup(
-    name="cli-anything-hiero-pqc",
+    name="gridera-scan-cli",
     version="0.1.0",
-    description="Post-Quantum Cryptography audit CLI for the Hiero/Hedera ecosystem",
+    description="Post-Quantum Cryptography audit CLI for the GRIDERA platform",
     long_description=open("README.md").read() if __import__("os").path.exists("README.md") else "",
     long_description_content_type="text/markdown",
     author="TAURUS AI Corp",
     author_email="admin@taurusai.io",
-    url="https://github.com/Taurus-Ai-Corp/hiero-cli-pqc",
+    url="https://github.com/Taurus-Ai-Corp/gridera-scan-cli",
     license="MIT",
     packages=find_namespace_packages(include=["cli_anything.*"]),
     install_requires=[
@@ -16,8 +16,8 @@ setup(
     ],
     entry_points={
         "console_scripts": [
-            "hiero-pqc=cli_anything.hiero_pqc.hiero_pqc_cli:cli",
-            "cli-anything-hiero-pqc=cli_anything.hiero_pqc.hiero_pqc_cli:cli",
+            "gridera-scan=cli_anything.hiero_pqc.hiero_pqc_cli:cli",
+            "gridera-scan-cli=cli_anything.hiero_pqc.hiero_pqc_cli:cli",
         ],
     },
     python_requires=">=3.9",
@@ -35,5 +35,5 @@ setup(
         "Topic :: Security :: Cryptography",
         "Topic :: System :: Networking",
     ],
-    keywords="pqc post-quantum cryptography hedera hiero ssl tls audit compliance nist",
+    keywords="gridera pqc post-quantum cryptography hedera hiero ssl tls audit compliance nist",
 )
