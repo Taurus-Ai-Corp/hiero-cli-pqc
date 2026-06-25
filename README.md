@@ -1,6 +1,6 @@
-# hiero-cli-pqc
+# GRIDERA Scan CLI
 
-Post-Quantum Cryptography audit CLI for the [Hiero](https://hiero.org) / [Hedera](https://hedera.com) ecosystem.
+Post-Quantum Cryptography audit CLI for the [GRIDERA](https://github.com/Taurus-Ai-Corp/GRIDERA) platform.
 
 Scan SSL certificates, score quantum vulnerability, generate compliance reports, and anchor audit trails to Hedera Consensus Service (HCS).
 
@@ -11,16 +11,16 @@ Scan SSL certificates, score quantum vulnerability, generate compliance reports,
 ## Quick Start
 
 ```bash
-pip install cli-anything-hiero-pqc
+pip install gridera-scan-cli
 
 # Scan a single domain
-hiero-pqc scan rbc.com
+gridera-scan scan rbc.com
 
 # Full compliance report
-hiero-pqc report rbc.com --industry finance --size enterprise
+gridera-scan report rbc.com --industry finance --size enterprise
 
 # Batch pipeline (scan → score → report → audit hash)
-hiero-pqc pipeline targets.txt --industry finance --output ./results
+gridera-scan pipeline targets.txt --industry finance --output ./results
 ```
 
 ## Features
@@ -55,15 +55,15 @@ hiero-pqc pipeline targets.txt --industry finance --output ./results
 ## Commands
 
 ```
-hiero-pqc scan <domain>           # Scan single domain
-hiero-pqc scan-batch <file>       # Scan multiple domains
-hiero-pqc score <scan.json>       # Score scan results
-hiero-pqc report <domain>         # Full pipeline for one domain
-hiero-pqc pipeline <file>         # Batch: scan → score → report → hash
-hiero-pqc audit hash <file>       # Generate SHA-256 for Hedera anchoring
-hiero-pqc audit verify <topic> <hash>  # Verify hash on Hedera HCS
-hiero-pqc audit messages <topic>  # View HCS topic messages
-hiero-pqc info                    # Tool capabilities
+gridera-scan scan <domain>           # Scan single domain
+gridera-scan scan-batch <file>       # Scan multiple domains
+gridera-scan score <scan.json>       # Score scan results
+gridera-scan report <domain>         # Full pipeline for one domain
+gridera-scan pipeline <file>         # Batch: scan → score → report → hash
+gridera-scan audit hash <file>       # Generate SHA-256 for Hedera anchoring
+gridera-scan audit verify <topic> <hash>  # Verify hash on Hedera HCS
+gridera-scan audit messages <topic>  # View HCS topic messages
+gridera-scan info                    # Tool capabilities
 ```
 
 All commands support `--json` for machine-readable output.
@@ -83,34 +83,11 @@ All commands support `--json` for machine-readable output.
 ```
 Domain URL → OpenSSL s_client → Certificate Parser → Crypto Classifier
                                                            ↓
-                                                    4-Factor Scorer
-                                                     (crypto × expiry × industry × size)
+                                                    Quantum Risk Score (QRS)
                                                            ↓
-                                              Report Generator → SHA-256 Hash
-                                                                      ↓
-                                                              Hedera HCS Anchor
+                                              Compliance Report + HCS Audit Hash
 ```
-
-## Standards Referenced
-
-- **NIST FIPS 203** — ML-KEM (Kyber) Key Encapsulation
-- **NIST FIPS 204** — ML-DSA (Dilithium) Digital Signatures
-- **NIST FIPS 205** — SLH-DSA (SPHINCS+) Stateless Hash Signatures
-- **NIST SP 800-131A Rev 2** — Transitioning Cryptographic Algorithms
-- **CNSA 2.0** — NSA Commercial National Security Algorithm Suite
-
-## Requirements
-
-- Python 3.9+
-- OpenSSL (system binary)
-- `click>=8.0`
 
 ## License
 
-MIT — TAURUS AI Corp
-
-## Contributing
-
-Contributions welcome. See [CONTRIBUTING.md](CONTRIBUTING.md) for guidelines.
-
-Built for the [Hiero](https://hiero.org) open-source ecosystem.
+MIT — TAURUS AI Corp.
